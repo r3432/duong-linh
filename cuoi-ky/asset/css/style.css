@@ -562,7 +562,9 @@ margin-right: 10px;
   width: 0px;
   height: 0px;
 }
-
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+margin-top:-10px;
+}
 /* insta */
 .insta{
   width: 1920px;
