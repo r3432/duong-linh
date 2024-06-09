@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // 
-function xemhang(){
-  window.location.href="product-detail.html"
+function xemhang(productId) {
+  window.location.href = `product-detail.html?id=${productId}`;
 }
 
 function cart(){
@@ -84,17 +84,6 @@ const getAPI = async (URLapi) => {
   // console.log(response.data.results); 
   ShowMovie(response.data)
 }
-
-const searchProduct = async (title) => {
-  try {
-    let response = await axios.get(`${apiUrl}/search?title=${title}`);
-    ShowMovie(response.data.product);
-  } catch (error) {
-    console.error("Error searching for product:", error);
-  }
-};
-
-
 
 getAPI(apiUrl); 
 let rowJS=document.querySelector(".row-js")
@@ -122,7 +111,8 @@ const ShowMovie=(data)=>{
               <span class="bestselling-product-price"> ${product.price}</span>
   
               <div class="bestselling-product-button-wrap">
-                <button class="bestselling-product-button" id="product-detail"  onclick="xemhang()">Xem hàng</button>
+                <button class="bestselling-product-button" onclick="xemhang(this.getAttribute('data-product-id'))" data-product-id="${product.id}">Xem hàng</button>
+
               </div>
             </div>
            
@@ -133,21 +123,35 @@ const ShowMovie=(data)=>{
 rowJS.innerHTML = HTML;
 };
 
-// Lấy phần tử DOM của form, input và nút tìm kiếm
+// Chuc nang tim kiem
 const form = document.querySelector('.header-search');
 const inputSearch = document.querySelector('.header_search-input');
+const btnSearch=document.querySelector('.header_search-btn');
+// console.log(form);
+// console.log(inputSearch);
 
-// Lắng nghe sự kiện submit của biểu mẫu tìm kiếm
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt
-
-  // Lấy giá trị từ ô tìm kiếm
-  const searchTerm = inputSearch.value.trim();
-
-  // Kiểm tra nếu giá trị tìm kiếm không rỗng
-  if (searchTerm !== '') {
-    searchProduct(searchTerm); // Thực hiện yêu cầu tìm kiếm
-  } else {
-    alert("Vui lòng nhập từ khóa tìm kiếm!");
+const searchProduct = async (title) => {
+  try {
+    let response = await axios.get(`${apiUrl}/search?title=${title}`);
+    ShowMovie(response.data.product);
+  } catch (error) {
+    console.error("Error searching for product:", error);
   }
-});
+};
+
+form.addEventListener('submit', (event)=>{
+  event.preventDefault(); //Bo loading mac dinh trinh duyet
+
+
+  // B1: Lay gia tri cua ong nguoi dung search
+  const searchTerm = inputSearch.value;
+  console.log(searchTerm);
+
+  if(searchTerm && searchTerm !== '') {
+
+    getApi(apiUrl + searchTerm);
+    
+  }else {
+    alert("Vui long nhap ten cua ban!");
+  }
+})
