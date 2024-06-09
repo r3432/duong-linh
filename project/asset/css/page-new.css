@@ -1,0 +1,93 @@
+.post {
+  padding: 40px 0;
+  background-color: #f7f7f7;
+}
+.post-title-heading {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.post-item {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+.post-item-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.post-item-heading {
+  font-size: 1.5em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.post-item-title {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+.post-item-title:hover {
+  color: #0056b3;
+}
+.post-item-date, .post-item-cate-wrap {
+  color: #999;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.post-item-cate {
+  display: inline-block;
+  margin-right: 15px;
+}
+.post-item-cate-icon, .post-item-cate-ad-icon {
+  margin-right: 5px;
+}
+.post-item-descrip {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+.post-view {
+  text-align: center;
+  margin-top: 20px;
+}
+.post-view-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.post-view-btn:hover {
+  background-color: #0056b3;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.pagination a {
+  color: #007bff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.pagination a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.pagination .active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}

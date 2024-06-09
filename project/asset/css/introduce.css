@@ -1,0 +1,163 @@
+/* Reset some default styles */
+body, html, div, p, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container and row styles */
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.introduce-banner {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.introduce-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Introduce box styles */
+.introduce-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:10px;
+  /* height: 300px; */
+}
+
+.introduce-box:hover {
+  transform: translateY(-10px);
+}
+
+.introduce-box-img {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+}
+
+.introduce-box-img i {
+  font-size: 36px;
+  color: #333;
+}
+
+.introduce-box-title {
+  padding: 20px;
+  background-color: white;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduce-box-title p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.introduce-box-btn {
+  padding: 10px 0;
+  background-color: #ff6347;
+  border-top: 1px solid #ccc;
+}
+
+.introduce-box-btn input[type="button"] {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 0 10px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.introduce-box-btn input[type="button"]:hover {
+  background-color: #e55337;
+}
+
+
+
+
+
+
+
+/* phan dưới  */
+
+.content-1{
+  display: flex;
+  background-color: rgb(234, 242, 254);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+.content-title{
+  padding: 25px 15px;
+}
+.content-title h2{
+  color: rgb(10, 103, 233);
+ margin-bottom: 30px;
+}
+.content-img img{
+padding: 25px 15px;
+}
+
+
+.content-2{
+display: flex;
+justify-content: center;
+
+}
+.content-2-wrap{
+  position: relative;
+}
+.content-position{
+  position: absolute;
+  top:39%;
+  left: 43%;
+  font-size: 30px;
+width: 180px;
+  text-align: center;
+}
+.content-2-wrap .content-position{ 
+  width: 180px;
+  text-align: center;
+}
+.content-2 div{
+  width: 50%;
+  height: 200px;
+  background-color:  rgb(21, 69, 136);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 10px;
+
+}

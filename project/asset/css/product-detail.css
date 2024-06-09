@@ -1,0 +1,72 @@
+.detail-img{
+  height: 500px;
+  width: 100%;
+  background-color: blueviolet;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.detail-img h1{
+  /* font-size: 24px; */
+  margin-bottom: 10px;
+}
+.detail-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detail-name{
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: stretch;
+}
+
+.buy-now-button {
+  background-color: #ff424e;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+.add-to-cart-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid red;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+.add-to-cart-button:hover, .buy-now-button:hover {
+  background-color: #ff6b72;
+}
+
+/* hieu ung ảnh  */
+.thumbnail-img-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnail-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail-img:hover {
+  border-color: #ff424e;
+}
+.thumbnail-img-wrap img{
+  object-fit: cover;
+}

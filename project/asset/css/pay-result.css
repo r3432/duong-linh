@@ -1,0 +1,29 @@
+.pay-wrap{
+  display: flex;
+  justify-content: center;
+}
+.pay-wrap .pay-icon{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay-wrap .pay-icon i{
+padding: 30px 30px;
+background-color: green;
+border-radius: 50%;
+font-size: 45px;
+margin-right: 10px;
+}
+.pay-wrap .pay-icon .pay-title{
+  width:700px;
+}
+.pay-wrap .pay-icon .pay-title p{
+ margin-bottom:5px;
+ font-size: 25px;
+}
+
+
+.cart-main-infor {
+ display: block;
+}

@@ -1,0 +1,53 @@
+.contact{
+  margin-bottom: 30px;
+}
+.contact-map{
+  padding-left: 0;
+}
+.contact-sefl , .contact-register {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px; */
+}
+.contact-sefl h3, .contact-register h3{
+
+}
+.contact-sefl p, .contact-register p{
+  font-size: 1em;
+
+}
+
+.contact-list{
+  list-style: none;
+  padding-left: 0;
+}
+.contact-list-link{
+  margin-bottom: 10px;
+}
+.contact-list-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+.contact-list-link a:hover {
+  text-decoration: underline;
+}
+form input,form textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+form button{
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+form button:hover {
+  background-color: #0056b3;
+}
