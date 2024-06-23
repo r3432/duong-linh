@@ -1,0 +1,32 @@
+.product-love {
+  margin-top: 20px;
+  background-color: white;
+}
+.product {
+  /* background-color: white;
+  padding: 50px 0; */
+}
+/* footer */
+.footer-top{
+  background-color: #F1F1F1;
+  padding-top: 20px;
+}
+.footer-top-intro{
+
+}
+
+.footer-top-policy{
+
+}
+.footer-top-policy-list{
+  padding-left:0;
+}
+.footer-top-policy ul{
+  list-style: none;
+ 
+}
+.footer-top-policy ul a{
+  text-decoration: none;
+}
+
+

@@ -3,7 +3,7 @@ setTimeout(function() {
 }, 60 * 1000);
 
 $(document).ready(function() {
-  var owl = $('.owl-carousel');
+  var owl = $('.xxx');
   owl.owlCarousel({
     loop: true,
     autoplay: true,
@@ -28,6 +28,35 @@ $(document).ready(function() {
 
   $('.owl-next').click(function() {
     owl.trigger('next.owl.carousel');
+  });
+
+  // Slide demo
+  var owlC = $('.ccc');
+  owlC.owlCarousel({
+    loop: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+
+  // Custom Navigation Events
+  $('.owl-prev').click(function() {
+    owlC.trigger('prev.owl.carousel');
+  });
+
+  $('.owl-next').click(function() {
+    owlC.trigger('next.owl.carousel');
   });
 });
 
@@ -77,17 +106,58 @@ function cart(){
 // lay api 
 // Lấy API từ URL
 const apiUrl = 'https://nsm5kp-3000.csb.app/product';
+// const apiUrl1 = 'https://nsm5kp-3000.csb.app/product1';
 
 // Hàm lấy dữ liệu từ API và hiển thị sản phẩm
 const getAPI = async (URLapi) => {
   let response = await axios.get(URLapi);
   // console.log(response.data.results); 
-  ShowMovie(response.data)
+  ShowMovie(response.data);
+  ShowProduct(response.data)
 }
 
 getAPI(apiUrl); 
+// getAPI(apiUrl1); 
+
+
 let rowJS=document.querySelector(".row-js")
-// console.log(rowJS)
+
+let rowJSproduct=document.querySelector(".product .product-box")
+// console.log(rowJSproduct)
+
+const ShowProduct=(data)=>{
+  let HTML=``;
+  // console.log(data);
+  data.forEach(product => {
+    // Tạo HTML cho mỗi sản phẩm từ dữ liệu API
+    HTML += `
+        <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
+            <div class="product-item">
+              <div class="product-panel-img-wrap">
+                <img src="${product.image}" alt="" class="product__panel-img">
+              </div>
+              <h3 class="product-panel-heading">
+                <a class="product-panel-link" href="#">${product.title}</a>
+              </h3>
+              <div class="product-panel-rate-wrap">
+                ${'<i class="fas fa-star product-panel-rate"></i>'.repeat(product.rating)}
+              </div>
+            <div class="product-panel-price">
+            <span class="product-panel-price-old">${product["price-old"]}</span>
+            <span class="product-panel-price-current">${product["price-current"]}</span>
+          </div>
+          <div class="product-panel-price-sale-off">${product["sale-off"]}</div>
+              <div class="product-buttons">
+                <button href="" onclick="xemhang(this.getAttribute('data-product-id'))" class="btn btn-view" data-product-id="${product.id}" >${product.buttonText}</button>
+                <a href="#" class="btn btn-buy">Mua ngay</a>
+              </div>
+            </div>
+          </div>`;
+});
+
+// Thêm sản phẩm vào phần tử có class row-js
+rowJSproduct.innerHTML = HTML;
+};
  
 const ShowMovie=(data)=>{
   let HTML=``;
@@ -126,32 +196,71 @@ rowJS.innerHTML = HTML;
 // Chuc nang tim kiem
 const form = document.querySelector('.header-search');
 const inputSearch = document.querySelector('.header_search-input');
-const btnSearch=document.querySelector('.header_search-btn');
-// console.log(form);
-// console.log(inputSearch);
+const btnSearch = document.querySelector('.header_search-btn');
 
-const searchProduct = async (title) => {
-  try {
-    let response = await axios.get(`${apiUrl}/search?title=${title}`);
-    ShowMovie(response.data.product);
-  } catch (error) {
-    console.error("Error searching for product:", error);
+// Xử lý khi submit form
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt khi submit
+  searchProduct();
+});
+
+// Xử lý khi nhấn nút "Tìm kiếm"
+btnSearch.addEventListener('click', async () => {
+  searchProduct();
+});
+
+// Hàm tìm kiếm sản phẩm
+// Hàm tìm kiếm sản phẩm
+const searchProduct = async () => {
+  const searchTerm = inputSearch.value.trim();
+
+  if (searchTerm !== '') {
+    try {
+      // Gửi yêu cầu tìm kiếm sản phẩm
+      const response = await axios.get(`${apiUrl}?title=${searchTerm}`);
+      const searchData = response.data;
+
+      // Xóa kết quả tìm kiếm trước đó (nếu có)
+      rowJS.innerHTML = '';
+
+      // Hiển thị kết quả tìm kiếm trên trang web
+      if (searchData.length > 0) {
+        ShowMovie(searchData);
+      } else {
+        rowJS.innerHTML = '<p>Không tìm thấy sản phẩm phù hợp</p>';
+      }
+    } catch (error) {
+      console.error("Error searching for product:", error);
+    }
+  } else {
+    alert("Vui lòng nhập từ khóa tìm kiếm!");
   }
 };
 
-form.addEventListener('submit', (event)=>{
-  event.preventDefault(); //Bo loading mac dinh trinh duyet
+// reponsive
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const headerNav = document.querySelector('.header_nav');
+
+  mobileMenuToggle.addEventListener('click', function () {
+    headerNav.classList.toggle('active');
+  });
+});
 
 
-  // B1: Lay gia tri cua ong nguoi dung search
-  const searchTerm = inputSearch.value;
-  console.log(searchTerm);
+// slide product-love
 
-  if(searchTerm && searchTerm !== '') {
-
-    getApi(apiUrl + searchTerm);
-    
-  }else {
-    alert("Vui long nhap ten cua ban!");
-  }
-})
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 'auto', // Số lượng slide hiển thị
+  spaceBetween: 30, // Khoảng cách giữa các slide
+  navigation: {
+    nextEl: '.swiper-button-next', // Nút điều hướng slide tiếp theo
+    prevEl: '.swiper-button-prev', // Nút điều hướng slide trước đó
+  },
+  
+  loop: true, // Cho phép lặp lại các slide
+  autoplay: {
+    delay: 1000, // Độ trễ giữa các slide (3 giây)
+    disableOnInteraction: false, // Không tắt autoplay khi người dùng tương tác
+  },
+});

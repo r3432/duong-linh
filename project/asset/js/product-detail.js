@@ -81,6 +81,8 @@ const showDetail = (data) => {
             </div>
           </div>
         </div>`;
+        validateSizeSelection();
+  
   } else {
     imgDetail.innerHTML = "<p>Product not found</p>";
   }
@@ -88,3 +90,62 @@ const showDetail = (data) => {
 
 
 
+
+// them san pham vao gio hang
+document.addEventListener("DOMContentLoaded", function() {
+  const adCart = document.querySelector(".add-cart");
+  const headCart = document.querySelector(".header-cart");
+
+  headCart.addEventListener("click", (event) => {
+    event.preventDefault();
+    adCart.style.display = "block";
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!headCart.contains(event.target)) {
+      adCart.style.display = "none";
+    }
+  });
+
+  document.body.addEventListener("click", (event) => {
+    if (event.target.closest(".add-to-cart-button")) {
+      event.stopPropagation();
+      const productElement = event.target.closest(".detail-name");
+      const product = {
+        id: idDetail,
+        image: productElement.querySelector("#mainImage").src,
+        title: productElement.querySelector(".detail-taitle").innerText,
+        price: productElement.querySelector(".detail-price").innerText
+      };
+      addToCart(product);
+      updateCartDisplay();
+      adCart.style.display = "block";
+      console.log("Thêm vào giỏ hàng");
+    }
+  });
+
+  const addToCart = (product) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
+  const updateCartDisplay = () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartDisplay = document.querySelector(".add-cart");
+    cartDisplay.innerHTML = cart.map(product => `
+      <div class="cart-item">
+        <img src="${product.image}" alt="${product.title}" />
+        <div>
+          <h4>${product.title}</h4>
+          <p>${product.price}</p>
+        </div>
+      </div>
+    `).join("");
+  };
+
+  updateCartDisplay();
+});
+
+
+// truy cap vao phan tu add click

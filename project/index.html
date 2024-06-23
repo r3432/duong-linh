@@ -7,6 +7,8 @@
   <title>Trang chủ</title>
   <link rel="stylesheet" href="./asset/css/style.css">
   
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./asset/font/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.theme.default.min.css">
@@ -27,7 +29,7 @@
                   <a href="./login.html" class="header-top-link">Đăng nhập</a>
                 </li>
                 <li class="header-top-item">
-                  <a href=" #" class="header-top-link">Đăng ký</a>
+                  <a href="register.html" class="header-top-link">Đăng ký</a>
                 </li>
                 <!-- <li class="header-top-item">
                   <a href=" #" class="header-top-link">Hướng dẫn</a>
@@ -55,7 +57,7 @@
              
           </div>
 
-          <div class="  header-search">
+          <form class="  header-search">
             <select id="" class=" header_search-select" name="">
               <option value="0">All</option>
               <option value="1">duong linh</option>
@@ -70,7 +72,7 @@
                 <i class="fas fa-search header_search-icon"></i>
               </div>
             </button>
-          </div>
+          </form>
 
           <a href ="#" class="  header-login">
             <div class="header-login-icon">
@@ -150,15 +152,15 @@
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol> -->
-              <div class="owl-carousel owl-theme">
+              <div class="xxx owl-carousel owl-theme">
                   <div class="item active">
                       <img src="images1/1.webp" class="d-block w-100" alt="...">
                   </div>
                   <div class="item">
-                    <img src="images1/banner/Gold_DongA_600X350.jpg" class="d-block w-100" alt="...">
+                    <img src="images1/maxcare.webp" class="d-block w-100" alt="...">
                   </div>
                   <div class="item">
-                    <img src="images1/banner/megabook-glod600X350.png" class="d-block w-100" alt="...">
+                    <img src="images1/maxcare2.webp" class="d-block w-100" alt="...">
                   </div>
               </div>
               <a class="carousel-control-prev owl-prev">
@@ -177,6 +179,20 @@
     <button onclick="topFunction()" id="myBtn-scroll" title="Go to top"><i class="fas fa-chevron-up"></i></i></button>
   <!-- end slide menu list -->
 <!-- score-top-->
+
+<!-- <div class="ccc owl-carousel owl-theme">
+  <div class="item active">
+      <img src="images1/1.webp" class="d-block w-100" alt="...">
+  </div>
+  <div class="item">
+    <img src="images1/maxcare.webp" class="d-block w-100" alt="...">
+  </div>
+  <div class="item">
+    <img src="images1/maxcare2.webp" class="d-block w-100" alt="...">
+  </div>
+</div> -->
+
+
 
     <!-- bestselling product -->
     <section class="bestselling">
@@ -355,7 +371,7 @@
             <!-- <h2 class="col-md-6 text-center product-title">duong anh linh</h2> -->
 
             <div class="product-top-wrap">
-              <div class="product-top-heading">Top bán chạy nhất </div>
+              <div class="product-top-heading">Sản phẩm </div>
             </div>
             <div class="product-menu-wrap">
             <ul class="product-menu-item">
@@ -379,7 +395,7 @@
           <div class="row product-box gx-3 gy-4">
       
           
-            <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
               <div class="product-item">
                 <div class="product-panel-img-wrap">
                   <img src="images1/m2.jpg" alt="" class="product__panel-img">
@@ -535,7 +551,7 @@
       </div>
       <div class="product-panel-price-sale-off">20%</div>
     </div>
-  </div>
+  </div> -->
 
 
        
@@ -548,122 +564,127 @@
     <!-- product love -->
 <!-- test -->
   
-   <section class="product-love">
-    <div class="container">
-      <div class="row big-white">
-        <div class="product-love-title col-lg-12 col-md-12 col-sm-12 ">
-          <h2 class="">
-            Có thể bạn thích
-        </h2>
-        </div>        
+<section class="product-love">
+  <div class="container">
+    <div class="row big-white">
+      <div class="product-love-title col-lg-12 col-md-12 col-sm-12 ">
+        <h2 class="">
+          Có thể bạn thích
+      </h2>
+      </div>        
+    </div>
+
+    <!-- slider san pham -->
+    <div class="ccc owl-carousel owl-theme">
+      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="product-item">
+          <div class="product-panel-img-wrap">
+            <img src="images1/m2.jpg" alt="Product Image">
+          </div>
+          <h3 class="product-panel-heading">
+            <a class="product-panel-link" href="#">Ghế massage - Truyền thuyết</a>
+          </h3>
+          <div class="product-panel-rate-wrap">
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+          </div>
+          <div class="product-panel-price">
+            <span class="product-panel-price-old">28.000đ</span>
+            <span class="product-panel-price-current">24.000đ</span>
+          </div>
+          <div class="product-panel-price-sale-off">20%</div>
+          <div class="product-buttons">
+            <a href="#" class="btn btn-view">Xem hàng</a>
+            <a href="#" class="btn btn-buy">Mua ngay</a>
+          </div>
+        </div>
       </div>
 
-      <div class="row product-box gx-3 gy-4">
-      
-          
-        <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
-          <div class="product-item">
-            <div class="product-panel-img-wrap">
-              <img src="images1/m2.jpg" alt="" class="product__panel-img">
-            </div>
-            <h3 class="product-panel-heading">
-              <a class="product-panel-link" href="#">ghe massage-truyen thuyet</a>
-            </h3>
-            <div class="product-panel-rate-wrap">
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-            </div>
-            <div class="product-panel-price">
-              <span class="product-panel-price-old">28.000d</span>
-              <span class="product-panel-price-current">24.000d</span>
-            </div>
-            <div class="product-panel-price-sale-off">20%</div>
-            <div class="product-buttons">
-              <a href="#" class="btn btn-view">Xem hàng</a>
-              <a href="#" class="btn btn-buy">Mua ngay</a>
-            </div>
+      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="product-item">
+          <div class="product-panel-img-wrap">
+            <img src="images1/m2.jpg" alt="Product Image">
+          </div>
+          <h3 class="product-panel-heading">
+            <a class="product-panel-link" href="#">Ghế massage - Truyền thuyết</a>
+          </h3>
+          <div class="product-panel-rate-wrap">
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+          </div>
+          <div class="product-panel-price">
+            <span class="product-panel-price-old">28.000đ</span>
+            <span class="product-panel-price-current">24.000đ</span>
+          </div>
+          <div class="product-panel-price-sale-off">20%</div>
+          <div class="product-buttons">
+            <a href="#" class="btn btn-view">Xem hàng</a>
+            <a href="#" class="btn btn-buy">Mua ngay</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
-          <div class="product-item">
-            <div class="product-panel-img-wrap">
-              <img src="images1/m2.jpg" alt="" class="product__panel-img">
-            </div>
-            <h3 class="product-panel-heading">
-              <a class="product-panel-link" href="#">ghe massage-truyen thuyet</a>
-            </h3>
-            <div class="product-panel-rate-wrap">
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-            </div>
-            <div class="product-panel-price">
-              <span class="product-panel-price-old">28.000d</span>
-              <span class="product-panel-price-current">24.000d</span>
-            </div>
-            <div class="product-panel-price-sale-off">20%</div>
+      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="product-item">
+          <div class="product-panel-img-wrap">
+            <img src="images1/m2.jpg" alt="Product Image">
+          </div>
+          <h3 class="product-panel-heading">
+            <a class="product-panel-link" href="#">Ghế massage - Truyền thuyết</a>
+          </h3>
+          <div class="product-panel-rate-wrap">
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+          </div>
+          <div class="product-panel-price">
+            <span class="product-panel-price-old">28.000đ</span>
+            <span class="product-panel-price-current">24.000đ</span>
+          </div>
+          <div class="product-panel-price-sale-off">20%</div>
+          <div class="product-buttons">
+            <a href="#" class="btn btn-view">Xem hàng</a>
+            <a href="#" class="btn btn-buy">Mua ngay</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
-          <div class="product-item">
-            <div class="product-panel-img-wrap">
-              <img src="images1/m2.jpg" alt="" class="product__panel-img">
-            </div>
-            <h3 class="product-panel-heading">
-              <a class="product-panel-link" href="#">ghe massage-truyen thuyet</a>
-            </h3>
-            <div class="product-panel-rate-wrap">
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-            </div>
-            <div class="product-panel-price">
-              <span class="product-panel-price-old">28.000d</span>
-              <span class="product-panel-price-current">24.000d</span>
-            </div>
-            <div class="product-panel-price-sale-off">20%</div>
+      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="product-item">
+          <div class="product-panel-img-wrap">
+            <img src="images1/m2.jpg" alt="Product Image">
+          </div>
+          <h3 class="product-panel-heading">
+            <a class="product-panel-link" href="#">Ghế massage - Truyền thuyết</a>
+          </h3>
+          <div class="product-panel-rate-wrap">
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+          </div>
+          <div class="product-panel-price">
+            <span class="product-panel-price-old">28.000đ</span>
+            <span class="product-panel-price-current">24.000đ</span>
+          </div>
+          <div class="product-panel-price-sale-off">20%</div>
+          <div class="product-buttons">
+            <a href="#" class="btn btn-view">Xem hàng</a>
+            <a href="#" class="btn btn-buy">Mua ngay</a>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
-          <div class="product-item">
-            <div class="product-panel-img-wrap">
-              <img src="images1/m2.jpg" alt="" class="product__panel-img">
-            </div>
-            <h3 class="product-panel-heading">
-              <a class="product-panel-link" href="#">ghe massage-truyen thuyet</a>
-            </h3>
-            <div class="product-panel-rate-wrap">
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-              <i class="fas fa-star product-panel-rate"></i>
-            </div>
-            <div class="product-panel-price">
-              <span class="product-panel-price-old">28.000d</span>
-              <span class="product-panel-price-current">24.000d</span>
-            </div>
-            <div class="product-panel-price-sale-off">20%</div>
-          </div>
-        </div>
-
-     
-       
-
-
-
-
-   
+      </div>
     </div>
-    </div>
-   </section>
 
+  
+    
+  </div>
+ </section>
     <!--end product love -->
 
     <!-- post -->
@@ -681,12 +702,12 @@
         <article class="row post-list">
           <div class="post-item  col-lg-3 col-md-6 col-sm-6">
            <div class="post-item-img">
-            <img src="images1/m2.jpgpost/got-it-e-voucher.png" width="80%">
+            <img src="images1/m2.jpg/got-it-e-voucher.png" width="80%">
            </div>
 
            <h3 class="post-item-heading">
            <a href="#" class="post-item-title"> 
-            Mẹo săn mã voucher giảm giá tại Edu Book
+            Mẹo săn mã voucher giảm giá tại Okkachi
         </a>
            </h3>
 
@@ -715,20 +736,20 @@
            </div>
 
            <div class="post-item-descrip">
-            Nếu bạn đang gặp phải những vấn đề về săn, lấy, sử dụng mã voucher của EduBook. Xin hãy yên tâm, bài viết này 
+            Nếu bạn đang gặp phải những vấn đề về sức khỏe, lấy, sử dụng mã voucher của Okacchi. Xin hãy yên tâm, bài viết này 
             dành cho bạn! Trong bài viết này mình sẽ chia sẻ đến bạn những mẹo, những kinh nghiệm giúp bạn săn được nhiều 
-            mã giảm giá EduBook nhất có thể.....
+            mã giảm giá Okkachi nhất có thể.....
         </div>
           </div>
 
           <div class="post-item  col-lg-3 col-md-6 col-sm-6">
             <div class="post-item-img">
-             <img src="images1/m2.jpgpost/got-it-e-voucher.png" width="80%">
+             <img src="images1/m2.jpg/got-it-e-voucher.png" width="80%">
             </div>
  
             <h3 class="post-item-heading">
             <a href="#" class="post-item-title"> 
-             Mẹo săn mã voucher giảm giá tại Edu Book
+             Mẹo săn mã voucher giảm giá tại Okkachi
          </a>
             </h3>
  
@@ -755,24 +776,22 @@
  
            
             </div>
-
-            
  
             <div class="post-item-descrip">
-             Nếu bạn đang gặp phải những vấn đề về săn, lấy, sử dụng mã voucher của EduBook. Xin hãy yên tâm, bài viết này 
+             Nếu bạn đang gặp phải những vấn đề về sức khỏe, lấy, sử dụng mã voucher của Okacchi. Xin hãy yên tâm, bài viết này 
              dành cho bạn! Trong bài viết này mình sẽ chia sẻ đến bạn những mẹo, những kinh nghiệm giúp bạn săn được nhiều 
-             mã giảm giá EduBook nhất có thể.....
+             mã giảm giá Okkachi nhất có thể.....
          </div>
            </div>
 
            <div class="post-item  col-lg-3 col-md-6 col-sm-6">
             <div class="post-item-img">
-             <img src="images1/m2.jpgpost/got-it-e-voucher.png" width="80%">
+             <img src="images1/m2.jpg/got-it-e-voucher.png" width="80%">
             </div>
  
             <h3 class="post-item-heading">
             <a href="#" class="post-item-title"> 
-             Mẹo săn mã voucher giảm giá tại Edu Book
+             Mẹo săn mã voucher giảm giá tại Okkachi
          </a>
             </h3>
  
@@ -801,20 +820,20 @@
             </div>
  
             <div class="post-item-descrip">
-             Nếu bạn đang gặp phải những vấn đề về săn, lấy, sử dụng mã voucher của EduBook. Xin hãy yên tâm, bài viết này 
+             Nếu bạn đang gặp phải những vấn đề về sức khỏe, lấy, sử dụng mã voucher của Okacchi. Xin hãy yên tâm, bài viết này 
              dành cho bạn! Trong bài viết này mình sẽ chia sẻ đến bạn những mẹo, những kinh nghiệm giúp bạn săn được nhiều 
-             mã giảm giá EduBook nhất có thể.....
+             mã giảm giá Okkachi nhất có thể.....
          </div>
            </div>
 
            <div class="post-item  col-lg-3 col-md-6 col-sm-6">
             <div class="post-item-img">
-             <img src="images1/m2.jpgpost/got-it-e-voucher.png" width="80%">
+             <img src="images1/m2.jpg/got-it-e-voucher.png" width="80%">
             </div>
  
             <h3 class="post-item-heading">
             <a href="#" class="post-item-title"> 
-             Mẹo săn mã voucher giảm giá tại Edu Book
+             Mẹo săn mã voucher giảm giá tại Okkachi
          </a>
             </h3>
  
@@ -843,14 +862,14 @@
             </div>
  
             <div class="post-item-descrip">
-             Nếu bạn đang gặp phải những vấn đề về săn, lấy, sử dụng mã voucher của EduBook. Xin hãy yên tâm, bài viết này 
+             Nếu bạn đang gặp phải những vấn đề về sức khỏe, lấy, sử dụng mã voucher của Okacchi. Xin hãy yên tâm, bài viết này 
              dành cho bạn! Trong bài viết này mình sẽ chia sẻ đến bạn những mẹo, những kinh nghiệm giúp bạn săn được nhiều 
-             mã giảm giá EduBook nhất có thể.....
+             mã giảm giá Okkachi nhất có thể.....
          </div>
            </div>
 
           <div class="  post-view">
-            <a href="post.html" class="post-view-btn">Xem thêm</a>
+            <a href="page-new.html" class="post-view-btn">Xem thêm</a>
           </div>
         </article>
       </div>
@@ -942,12 +961,17 @@
 </header>
 
 
+
+
 <script src="./lib/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./lib/jquery-3.7.1.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./asset/js/main.js"></script>
 <script src="./asset/js/product-detail.js"></script>
+<script src="./asset/js/product.js"></script>
 </body>
 </html>
