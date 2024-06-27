@@ -211,12 +211,13 @@ body, html, div, p, input {
   flex-wrap: wrap;
   gap: 20px;
   position: relative;
+  margin-top: 40px;
 }
 
 .content-2-wrap .content-position {
-  position: absolute;
+  /* position: absolute;
   top: 45%;
-  left: 50%;
+  left: 50%; */
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: #fff;
@@ -226,6 +227,8 @@ body, html, div, p, input {
   text-align: center;
   z-index: 1;
   width:50%;
+  margin-top: 40px;
+  margin-left: 50%;
 }
 
 /* Nội dung trong các mục */
@@ -251,7 +254,7 @@ body, html, div, p, input {
 }
 @media (max-width: 480px) {
   .content .content-1 .col-12 {
-    display: block;
+   
   }
 }
 
