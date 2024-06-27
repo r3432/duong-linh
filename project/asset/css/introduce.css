@@ -249,8 +249,13 @@ body, html, div, p, input {
 .content-2 p {
   margin-bottom: 0;
 }
+@media (max-width: 480px) {
+  .content .content-1 .col-12 {
+    display: block;
+  }
+}
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .content-2-wrap .col-lg-6 {
     flex: 0 0 auto;
     width: 49%;

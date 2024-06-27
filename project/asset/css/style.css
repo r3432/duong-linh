@@ -753,7 +753,7 @@ height: 4.8rem;
 
   .header_top-right {
     margin-top: 10px;
-    flex-direction: column;
+   
     align-items: center;
   }
 
@@ -875,4 +875,25 @@ right: -90px;
     flex: 0 0 auto;
     width: 90%;
   }
+}
+
+
+
+/* active menu */
+/* .header-nav-link .active {
+  background-color: #ef2317;
+} */
+
+.header-nav-link:hover {
+  background-color: #ef2317;
+}
+
+.header-nav-link.active {
+  background-color: #ef2317;
+}
+
+.breadcrumb {
+
+  font-size: 16px;
+  background-color: #d9534f;
 }

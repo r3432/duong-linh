@@ -264,3 +264,76 @@ var swiper = new Swiper('.swiper-container', {
     disableOnInteraction: false, // Không tắt autoplay khi người dùng tương tác
   },
 });
+
+
+
+
+// active menu
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const setActiveMenu = (selector) => {
+    const menuItems = document.querySelectorAll(selector);
+
+    const removeActive = () => {
+      menuItems.forEach((item) => {
+        item.querySelector('a').classList.remove("active");
+      });
+    };
+
+    let activeIndex = localStorage.getItem("ACTIVE_MENU");
+
+    if (activeIndex !== null) {
+      removeActive();
+      menuItems[activeIndex].querySelector('a').classList.add("active");
+    } else {
+      menuItems[0].querySelector('a').classList.add("active");
+    }
+
+    menuItems.forEach((item, index) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        removeActive();
+        item.querySelector('a').classList.add("active");
+
+        localStorage.setItem("ACTIVE_MENU", index);
+        const href = item.querySelector("a").getAttribute("href");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 100);
+      });
+    });
+  };
+
+  setActiveMenu(".header-nav-item");
+});
+
+
+// dieu huong duoi thanh menu main
+document.addEventListener('DOMContentLoaded', function() {
+  const breadcrumb = document.getElementById('breadcrumb');
+  const currentPath = location.pathname.split('/').pop();
+
+  let breadcrumbText = 'Trang chủ';
+  switch(currentPath) {
+      case 'product.html':
+          breadcrumbText += ' / Sản phẩm';
+          break;
+      case 'introduce.html':
+          breadcrumbText += ' / Giới thiệu';
+          break;
+      case 'page-new.html':
+          breadcrumbText += ' / Bài viết';
+          break;
+      case 'contact.html':
+          breadcrumbText += ' / Liên hệ';
+          break;
+      case 'index.html':
+      default:
+          breadcrumbText += '';
+          break;
+  }
+
+  breadcrumb.textContent = breadcrumbText;
+});

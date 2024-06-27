@@ -119,9 +119,33 @@
   display: none;
   width: 350px;
   height: 100px;
-  background-color: pink;
+
   
 }
+.quantity-button{
+  padding:0px 5px;
+  border-radius: 50%;
+  border: none;
+  color: red;
+}
+/* cart-item */
+.cart-item {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #df3c3c;
+  background-color: #ffd8d8;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 60px;
+}
+
+
+
 .add-to-cart-button {
   background-color: #ffffff;
   color: #000000;
