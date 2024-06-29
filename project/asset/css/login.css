@@ -7,10 +7,11 @@
  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
-  width: 100%;
+ 
   text-align: center;
   position: relative;
  height: 600px;
+ 
 }
 
 .login-wrap .overlay {
@@ -22,36 +23,51 @@
   margin: auto;
 }
 
+
 .login-wrap h1 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #fff;
 }
 
- 
 .form-login .login-detail {
-  position: relative;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .form-login input {
   width: 100%;
-  padding: 10px 40px 10px 10px;
+  padding: 10px 10px 10px 40px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .form-login input:focus {
-  border-color: #ddd;
   outline: none;
 }
 
-.login-detail span {
+.form-login input.filled {
+  border-color: #67d5f7;
+  box-shadow: 0 0 5px rgba(103, 213, 247, 0.8);
+}
+
+.form-login input::placeholder {
+
+}
+
+.form-login .login-detail span {
   position: absolute;
-  right: 10px;
   top: 50%;
+  left: 10px;
   transform: translateY(-50%);
   color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.form-login input.filled + span i {
+  color: #67d5f7;
+  transform: scale(1.2);
 }
 
 .login-button {
@@ -72,13 +88,16 @@
 }
 
 .btn-submit {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .btn-submit:hover {
@@ -90,7 +109,6 @@
   justify-content: space-between;
   margin-top: 2rem;
 }
-
 .register-left, .register-right {
   display: flex;
   align-items: center;
@@ -109,8 +127,52 @@
 .register i {
   color: #ffffff;
 }
+
+/* Media Queries */
+@media (max-width: 768px)  {
+  .login-wrap {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .login-wrap .overlay {
+    width: 100%;
+  }
+
+  .login-button h4, .register {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .register-left, .register-right {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .login-wrap {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .login-wrap .overlay {
+    width: 100%;
+  }
+
+  .login-button h4, .register {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .register-left, .register-right {
+    margin-bottom: 1rem;
+  }
+}
+
 /* footer */
-.footer-top{
+.footer-top {
   background-color: antiquewhite;
-  padding-top:20px;
+  padding-top: 20px;
 }
