@@ -3,7 +3,7 @@ body, html, div, p, input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+ 
 }
 
 /* Container and row styles */
@@ -248,7 +248,9 @@ body, html, div, p, input {
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
-
+.header-nav-list{
+  margin-bottom:0;
+}
 .content-2 p {
   margin-bottom: 0;
 }
