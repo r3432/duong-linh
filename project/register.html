@@ -14,20 +14,20 @@
  
 </head>
 <body>
-<header id="header">
+  <header id="header">
     <!-- header top -->
     <div class="header_top">
       <div class="container">
         <div class="row flex">
-          <div class=" col-lg-5 col-md-0 col-sm-0 header_top-left">Linh</div>
+          <div class=" col-lg-5 col-md-0 col-sm-0 header_top-left"></div>
 
           <div class="col-lg-7 col-md-0 col-sm-0 header_top-right">
               <ul class="header-top-list">
                 <li class="header-top-item">
-                  <a href=" #" class="header-top-link">Đăng nhập</a>
+                  <a href="./login.html" class="header-top-link">Đăng nhập</a>
                 </li>
                 <li class="header-top-item">
-                  <a href=" #" class="header-top-link">Đăng ký</a>
+                  <a href="register.html" class="header-top-link">Đăng ký</a>
                 </li>
                 <!-- <li class="header-top-item">
                   <a href=" #" class="header-top-link">Hướng dẫn</a>
@@ -55,7 +55,7 @@
              
           </div>
 
-          <div class="  header-search">
+          <form class="  header-search">
             <select id="" class=" header_search-select" name="">
               <option value="0">All</option>
               <option value="1">duong linh</option>
@@ -70,7 +70,7 @@
                 <i class="fas fa-search header_search-icon"></i>
               </div>
             </button>
-          </div>
+          </form>
 
           <a href ="#" class="  header-login">
             <div class="header-login-icon">
@@ -90,7 +90,7 @@
             <div class="header-cart-icon-wrap">
               <span class="header-notice">4</span>
               <i class="fas fa-shopping-cart header_nav-cart-icon"></i>
-              <span class="">gio hang</span>
+              <span class="" onclick="cart()">gio hang</span>
             </div>
           </a>
 
@@ -118,25 +118,26 @@
           <div class=" col-lg-9 col-md-0 col-sm-0 header-nav">
             <ul class="header-nav-list">
               <li class="header-nav-item">
-                <a class="header-nav-link" href="">Trang chủ</a>
+                <a class="header-nav-link  active" href="#">Trang chủ</a>
               </li>
               <li class="header-nav-item">
-                <a class="header-nav-link" href="">Sản phẩm</a>
+                <a class="header-nav-link" href="product.html">Sản phẩm</a>
               </li>
               <li class="header-nav-item">
-                <a class="header-nav-link" href="">Giới thiệu</a>
+                <a class="header-nav-link" href="introduce.html">Giới thiệu</a>
               </li>
               <li class="header-nav-item">
-                <a class="header-nav-link" href="">Bài viết</a>
+                <a class="header-nav-link" href="page-new.html">Bài viết</a>
               </li>
               <li class="header-nav-item">
-                <a class="header-nav-link" href="">Liên hệ</a>
+                <a class="header-nav-link" href="contact.html">Liên hệ</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
   </header>
     <!--end header nav -->
 
@@ -166,46 +167,44 @@
 
 </section> -->
 <!-- login -->
-<div class="login-wrap">
+<div class="login-wrap ">
   <div class="overlay">
     <h1>Đăng ký</h1>
-    <form action="#" method="post" class="form-login">
+    <form action="#" method="post" class="form-login ">
       <div class="login-detail">
-        <input type="text" placeholder="Fullname" required>
-        <span>
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </span> 
-      </div> 
-      <div class="login-detail">
-        <input type="text" placeholder="Place" required>
-        <span>
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </span> 
-      </div> 
-      <div class="login-detail">
-        <input type="number" placeholder="Phone" required>
-        <span>
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </span> 
-      </div> 
-
-      <div class="login-detail">
-        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Họ và tên" >
         <span>
           <i class="fa fa-user" aria-hidden="true"></i>
         </span> 
       </div>
-
       <div class="login-detail">
-        <input type="password" placeholder="Password" required>
+        <input type="email" placeholder="Địa chỉ" >
+        <span>
+          <i class="fa-solid fa-location-dot"></i>
+        </span> 
+      </div>
+      <div class="login-detail">
+        <input type="number" placeholder="Số điện thoại" >
+        <span>
+          <i class="fa-solid fa-phone"></i>
+        </span> 
+      </div>
+      <div class="login-detail">
+        <input type="email" placeholder="Email" >
+        <span>
+          <i class="fa-solid fa-envelope"></i>
+        </span> 
+      </div>
+      <div class="login-detail">
+        <input type="password" placeholder="Password" >
         <span>
           <i class="fa fa-lock" aria-hidden="true"></i>
         </span> 
       </div>
 
       <div class="login-button">
-      
-        <button type="submit" class="btn-submit">Đăng ký</button>
+     
+        <button  class="btn-submit">Đăng ký</button>
       </div>
 
       <div class="register">
@@ -213,15 +212,14 @@
           <i class="fa-solid fa-arrow-left"></i>
           <a href="index.html">Quay về trang chủ</a>
         </div>
-        <!-- <div class="register-right"> 
-          <a href="#">Đăng ký</a>
+        <!-- <div class="register-right">                                              
+          <a href="./register.html">Đăng ký</a>
           <i class="fa-solid fa-arrow-right"></i>
         </div> -->
       </div>
     </form>
   </div>
 </div>
-
 
     <!-- product love -->
 <!-- test -->

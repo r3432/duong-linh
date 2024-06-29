@@ -37,6 +37,7 @@
   text-decoration: none;
   padding-right: 0;
   padding-top:30px;
+  color:white;
 }
 
 /*header-bottom  */
@@ -109,6 +110,11 @@
   font-size: 1rem;
 color: #F3F4F7;
 }
+
+.header-login{
+  color:white;
+}
+
 .header-login-icon{
   display: flex;
   align-items: center;
