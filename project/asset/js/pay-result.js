@@ -35,3 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setActiveMenu(".header-nav-item");
 });
+
+
+//wow js hieu ung animate
+jQuery(function () {
+  new WOW().init();
+});
+jQuery("[data-toggle='tooltip']").tooltip(); 

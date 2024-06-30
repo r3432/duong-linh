@@ -199,3 +199,8 @@ function renderPosts(page) {
             breadcrumb.textContent = breadcrumbText;
         });
         
+
+        jQuery(function () {
+          new WOW().init();
+      });
+      jQuery("[data-toggle='tooltip']").tooltip(); 

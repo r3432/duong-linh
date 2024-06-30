@@ -24,3 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   breadcrumb.textContent = breadcrumbText;
 });
+
+
+//wow js hieu ung animate
+jQuery(function () {
+    new WOW().init();
+  });
+  jQuery("[data-toggle='tooltip']").tooltip(); 
