@@ -125,6 +125,27 @@
 .register i {
   color: #ffffff;
 }
+
+@media (max-width: 850px) {
+  .login-wrap {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .login-wrap .overlay {
+    width: 100%;
+  }
+
+  .login-button h4, .register {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .register-left, .register-right {
+    margin-bottom: 1rem;
+  }
+}
+
 /* footer */
 .footer-top{
   background-color: antiquewhite;
