@@ -188,3 +188,118 @@
 .footer-top-policy ul a{
   text-decoration: none;
 }
+
+
+
+/* CSS cho tab */
+.custom-nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.custom-nav-tabs ul{
+
+}
+.custom-nav-tabs li {
+  
+  float: left;
+  margin-bottom: -1px;
+  list-style: none;
+
+}
+
+.custom-nav-tabs li a {
+  display: block;
+  padding: 10px 15px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  text-decoration: none;
+}
+
+.custom-nav-tabs li.active a,
+.custom-nav-tabs li a:hover {
+  border-color: #ddd #ddd #fff;
+  background-color: #f5f5f5;
+}
+
+.custom-nav-tabs li.active a {
+  color: #555;
+  cursor: default;
+}
+
+.custom-tab-content > .custom-tab-pane {
+  display: none;
+ 
+}
+.custom-tab-pane h3{
+  margin-top: 15px;
+}
+.custom-tab-content > .custom-tab-pane.active {
+  display: block;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+/* danh gia san pham */
+.product-add-review thead th{
+  background: #f8f8f8;
+  font-weight: normal;
+  text-align: center;
+  border: none;
+}
+.nav-tabs li a{
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+} 
+.tab-content h4{
+  font-style: italic;
+  color: red;
+  font-size: 17px;
+}
+.product-add-review .table tbody tr td{
+
+  font-weight: normal;
+  text-align: center;
+  
+}
+
+.product-add-review .table tbody tr td input{
+  margin: auto;
+}
+.review-form .form-group label {
+  font-weight: normal;
+}
+.review-form .form-group label  .sao{
+  color: red;
+}
+.review-form .form-group .form-control{
+width: 300px;
+height: 34px;
+background-color: white;
+border: 1px solid #ccc;
+}
+
+.review-form .form-group .form-control1 {
+  height: 70px;
+  width: 300px;
+  background-color: white;
+border: 1px solid #ccc;
+display: block;
+}
+
+.review-form .form-btn{
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(94, 164, 255);
+  width: 13%;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
+

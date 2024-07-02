@@ -216,4 +216,30 @@ document.addEventListener("DOMContentLoaded", () => {
 jQuery(function () {
   new WOW().init();
 });
-jQuery("[data-toggle='tooltip']").tooltip(); 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = document.querySelectorAll('.custom-nav-tabs li a');
+  var tabPanes = document.querySelectorAll('.custom-tab-pane');
+
+  tabs.forEach(function (tab) {
+      tab.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          tabs.forEach(function (t) {
+              t.parentElement.classList.remove('active');
+          });
+
+          tabPanes.forEach(function (pane) {
+              pane.classList.remove('active');
+          });
+
+          tab.parentElement.classList.add('active');
+          var activePane = document.querySelector(tab.getAttribute('href'));
+          activePane.classList.add('active');
+      });
+  });
+
+  // Kích hoạt tab đầu tiên khi tải trang
+  tabs[0].click();
+});

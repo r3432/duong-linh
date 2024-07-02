@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.carousel.min.css">
  
+
+  
 </head>
 <body>
 <header id="header">
@@ -228,11 +230,100 @@
    
   </div>
 
-  <div class="row">
-    <div class="detail-note col-12 ">
-      <textarea ></textarea>
+  <div class="container" style="margin-top: 35px;">
+    <ul class="custom-nav-tabs">
+        <li class="active"><a href="#description">Description</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#tags">Tags</a></li>
+    </ul>
+
+    <div class="custom-tab-content">
+        <div id="description" class="custom-tab-pane active">
+            <h3>Thông tin sản phẩm</h3>
+            <p>Miêu tả 100 chữ </p>
+        </div>
+        <div id="review" class="custom-tab-pane">
+            <h3>Đánh giá </h3>
+            <div class="product-add-review">
+                <div class="review table">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="cell-label">&nbsp;</th>
+                                    <th>1 sao</th>
+                                    <th>2 sao</th>
+                                    <th>3 sao</th>
+                                    <th>4 sao</th>
+                                    <th>5 sao</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="cell-label">Chất lượng</td>
+                                    <td><input type="radio" name="quality" class="radio" value="1"></td>
+                                    <td><input type="radio" name="quality" class="radio" value="2"></td>
+                                    <td><input type="radio" name="quality" class="radio" value="3"></td>
+                                    <td><input type="radio" name="quality" class="radio" value="4"></td>
+                                    <td><input type="radio" name="quality" class="radio" value="5"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="cell-label">Giá tiền</td>
+                                    <td><input type="radio" name="price" class="radio" value="1"></td>
+                                    <td><input type="radio" name="price" class="radio" value="2"></td>
+                                    <td><input type="radio" name="price" class="radio" value="3"></td>
+                                    <td><input type="radio" name="price" class="radio" value="4"></td>
+                                    <td><input type="radio" name="price" class="radio" value="5"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="cell-label">Có giá trị không?</td>
+                                    <td><input type="radio" name="value" class="radio" value="1"></td>
+                                    <td><input type="radio" name="value" class="radio" value="2"></td>
+                                    <td><input type="radio" name="value" class="radio" value="3"></td>
+                                    <td><input type="radio" name="value" class="radio" value="4"></td>
+                                    <td><input type="radio" name="value" class="radio" value="5"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- form review -->
+            <div class="review-form">
+                <div class="form-container">
+                    <form role="form" class="ctn-form">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Tên của bạn <span class="sao">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Đánh giá <span class="sao">*</span></label>
+                                    <textarea class="form-control" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-btn">
+                            Gửi đánh giá
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="tags" class="custom-tab-pane">
+            <h3>Tags</h3>
+            <p>............</p>
+        </div>
     </div>
-  </div>
+</div>
+
 </section>
 
 
@@ -449,8 +540,10 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./lib/jquery-3.7.1.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="./asset/js/main.js"></script>
 <script src="./asset/js/product-detail.js"></script>
+
 </body>
 </html>
