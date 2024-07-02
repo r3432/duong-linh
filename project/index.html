@@ -23,6 +23,12 @@
  
 </head>
 <body>
+
+
+
+
+
+  
 <header id="header"  class="">
     <!-- header top -->
     <div class="header_top">
@@ -111,41 +117,43 @@
      <!--end header bottom -->
 
     <!-- header nav -->
-    <div class="header_nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-0 col-sm-0 header-nav-menu" id="menuToggle">
-            <i class="fas fa-bars header_nav-menu-icon"></i>
-            <div class="header-nav-menu-title">Danh mục sản phẩm</div>
-            <ul id="productList" style="display: none;">
-              <li>Ghế 1</li>
-              <li>Ghế 2</li>
-              <li>Ghế 3</li>
-            </ul>
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Danh mục sản phẩm
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Ghế 1</a></li>
+                          <li><a class="dropdown-item" href="#">Ghế 2</a></li>
+                          <li><a class="dropdown-item" href="#">Ghế 3</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="product.html">Sản phẩm</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="introduce.html">Giới thiệu</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="page-new.html">Bài viết</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Liên hệ</a>
+                  </li>
+              </ul>
           </div>
-
-          <div class=" col-lg-9 col-md-0 col-sm-0 header-nav">
-            <ul class="header-nav-list">
-              <li class="header-nav-item">
-                <a class="header-nav-link  active" href="#">Trang chủ</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="product.html">Sản phẩm</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="introduce.html">Giới thiệu</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="page-new.html">Bài viết</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="contact.html">Liên hệ</a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>
+  </nav>
 
   </header>
     <!--end header nav -->
@@ -584,7 +592,7 @@
 
     <!-- slider san pham -->
     <div class="ccc owl-carousel owl-theme wow fadeInUp" data-wow-delay="0.2s">
-      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+      <div class="item ">
         <div class="product-item ">
           <div class="product-panel-img-wrap">
             <img src="images1/m2.jpg" alt="Product Image">
@@ -610,7 +618,7 @@
         </div>
       </div>
 
-      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+      <div class="item ">
         <div class="product-item">
           <div class="product-panel-img-wrap">
             <img src="images1/m2.jpg" alt="Product Image">
@@ -636,7 +644,7 @@
         </div>
       </div>
 
-      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+      <div class="item ">
         <div class="product-item">
           <div class="product-panel-img-wrap">
             <img src="images1/m2.jpg" alt="Product Image">
@@ -662,7 +670,7 @@
         </div>
       </div>
 
-      <div class=" product-silde-wrap col-lg-3 col-md-4 col-sm-6 col-12">
+      <div class="item ">
         <div class="product-item">
           <div class="product-panel-img-wrap">
             <img src="images1/m2.jpg" alt="Product Image">
