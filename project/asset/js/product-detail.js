@@ -34,7 +34,7 @@ const showDetail = (data) => {
   if (detail.length > 0) {
     imgDetail.innerHTML = `
       <div class="detail-img-wrap col-md-6">
-        <div class="detail-img">
+        <div class="detail-img1">
           <img id="mainImage" src="${detail[0].image}" alt="Product Image">
         </div>
         <div class="thumbnail-img-wrap">

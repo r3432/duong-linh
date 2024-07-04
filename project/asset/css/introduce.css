@@ -83,7 +83,9 @@ body, html, div, p, input {
   font-weight: bold;
   color: #333;
 }
-
+.introduce-box-title p a{
+  text-decoration: none;
+}
 .introduce-box-btn {
   padding: 10px 0;
   background-color: #ff6347;
@@ -227,7 +229,7 @@ body, html, div, p, input {
   text-align: center;
   z-index: 1;
   width:50%;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-left: 50%;
 }
 
@@ -256,7 +258,12 @@ body, html, div, p, input {
 }
 @media (max-width: 480px) {
   .content .content-1 .col-12 {
+   display: flex;
+   flex-wrap: wrap;
    
+  }
+  .content-img  .col-12{
+    display: none;
   }
 }
 
