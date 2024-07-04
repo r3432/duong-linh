@@ -39,8 +39,8 @@ const showDetail = (data) => {
         </div>
         <div class="thumbnail-img-wrap">
           <img class="thumbnail-img" src="images1/m2.jpg" alt="Thumbnail 1" onclick="changeImage(this.src)">
-          <img class="thumbnail-img" src="images/product_10.png" alt="Thumbnail 2" onclick="changeImage(this.src)">
-          <img class="thumbnail-img" src="images/product_12.png" alt="Thumbnail 3" onclick="changeImage(this.src)">
+          <img class="thumbnail-img" src="https://vn.osim.com/cdn/shop/products/udivine-v-massage-chair-product_800x.jpg?v=1687426463" alt="Thumbnail 2" onclick="changeImage(this.src)">
+          <img class="thumbnail-img" src="https://vn.osim.com/cdn/shop/files/iconuDeluxemaxnau1_800x.jpg?v=1702632237" alt="Thumbnail 3" onclick="changeImage(this.src)">
         </div>
       </div>
       <div class="detail-name col-md-6">
