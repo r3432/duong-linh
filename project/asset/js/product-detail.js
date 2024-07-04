@@ -45,17 +45,17 @@ const showDetail = (data) => {
       </div>
       <div class="detail-name col-md-6">
         <div class="detail-img">
-          <h1 class="detail-taitle">${detail[0].title}</h1>
+          <h1 class="detail-taitle"> ${detail[0].title}</h1>
           <div class="detail-rate">
-            ${'<i class="fas fa-star product-panel-rate"></i>'.repeat(detail[0].rating)}
+            ${'<i class="fas fa-star product-panel-rate"></i>'.repeat( detail[0].rating)}
           </div>
-          <h2 class="detail-taitle">${detail[0].code}</h2>
+          <h2 class="detail-taitle">Mã sản phẩm: ${detail[0].code}</h2>
           <div class="detail-taitle">
             <h3>Thông tin sản phẩm :</h3>
-            <p>${detail[0].inform.replace(/\n/g, '<br>')}</p>
+            <p>- ${detail[0].inform.replace(/\n/g, '<br> - ')}</p>
           </div>
           <div class="detail-price">
-            ${detail[0].price}
+           Giá tiền: ${detail[0].price}
           </div>
           <div class="detail-quantity">
             <h3>Số lượng:</h3>
