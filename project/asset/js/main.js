@@ -60,7 +60,7 @@ $(document).ready(function() {
   });
 });
 
-
+//scorll
 var mybutton = document.getElementById("myBtn-scroll");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -80,18 +80,18 @@ document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  var menuToggle = document.getElementById("menuToggle");
-  var productList = document.getElementById("productList");
+// document.addEventListener("DOMContentLoaded", function() {
+//   var menuToggle = document.getElementById("menuToggle");
+//   var productList = document.getElementById("productList");
 
-  menuToggle.addEventListener("click", function() {
-    if (productList.style.display === "none") {
-      productList.style.display = "block";
-    } else {
-      productList.style.display = "none";
-    }
-  });
-});
+//   menuToggle.addEventListener("click", function() {
+//     if (productList.style.display === "none") {
+//       productList.style.display = "block";
+//     } else {
+//       productList.style.display = "none";
+//     }
+//   });
+// });
 
 // 
 function xemhang(productId) {
