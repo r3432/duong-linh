@@ -509,6 +509,16 @@ border: 2px solid #ef2317;
   font-size: 0.8rem;
 }
 
+@media (max-width:480px){
+.product-menu-item{
+display: block;
+}
+
+.product-menu{
+  margin-bottom: 10px;
+}
+}
+
 /* Thiết kế cho các nút */
 .product-buttons {
   position: absolute;
@@ -746,9 +756,12 @@ height: 4.8rem;
 }
 .footer-top-policy ul a{
   text-decoration: none;
+  color: #1d1d1b;
 }
 
-
+.footer-top-policy ul a:hover{
+  color: red;
+}
 
 
 /* reponssive */

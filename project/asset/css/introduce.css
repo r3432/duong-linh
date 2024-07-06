@@ -172,7 +172,7 @@ body, html, div, p, input {
   border-radius: 20px;
   margin-bottom: 40px;
   overflow: hidden;
-   
+   flex-wrap: wrap;
 }
 
 .content-img img {

@@ -36,7 +36,7 @@ $(document).ready(function() {
     loop: true,
     nav: false,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 2000,
     responsive: {
       0: {
         items: 1
@@ -250,20 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // slide product-love
 
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 'auto', // Số lượng slide hiển thị
-  spaceBetween: 30, // Khoảng cách giữa các slide
-  navigation: {
-    nextEl: '.swiper-button-next', // Nút điều hướng slide tiếp theo
-    prevEl: '.swiper-button-prev', // Nút điều hướng slide trước đó
-  },
-  
-  loop: true, // Cho phép lặp lại các slide
-  autoplay: {
-    delay: 1000, // Độ trễ giữa các slide (3 giây)
-    disableOnInteraction: false, // Không tắt autoplay khi người dùng tương tác
-  },
-});
 
 
 
