@@ -80,6 +80,11 @@ function renderPosts(page) {
             }
         }
 
+
+
+
+
+        // 
         function renderPagination() {
             const pagination = document.getElementById('pagination');
             pagination.innerHTML = '';

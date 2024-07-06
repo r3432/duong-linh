@@ -24,14 +24,29 @@ const getAPI = async (URLapi) => {
 
 getAPI(apiUrl); 
 // getAPI(apiUrl1); 
-let rowJSproduct=document.querySelector(".product .product-box")
-console.log(rowJSproduct)
+const postsPerPage = 4;
+let currentPage = 1;
+
+let rowJSproduct = document.querySelector(".product .product-box");
+console.log(rowJSproduct);
+
 const ShowProduct = (data) => {
-  let HTML = ``;
-  // console.log(data);
-  data.forEach(product => {
-   
-    HTML += `
+  function setPage(page) {
+    const url = new URL(window.location);
+    url.searchParams.set('page', page);
+    window.history.pushState({}, '', url);
+    currentPage = page;
+    renderPosts(page);
+    renderPagination();
+  }
+
+  function renderPosts(page) {
+    rowJSproduct.innerHTML = '';
+    const start = (page - 1) * postsPerPage;
+    const end = page * postsPerPage;
+    let HTML = '';
+    data.slice(start, end).forEach(product => {
+      HTML += `
         <div class="col-lg-3 col-md-4 col-sm-6 product-panel-item-wrap">
             <div class="product-item">
               <div class="product-panel-img-wrap">
@@ -49,15 +64,83 @@ const ShowProduct = (data) => {
           </div>
           <div class="product-panel-price-sale-off">${product["sale-off"]}</div>
               <div class="product-buttons">
-                <button href="" onclick="xemhang(this.getAttribute('data-product-id'))" class="btn btn-view" data-product-id="${product.id}" >${product.buttonText}</button>
+                <button href="" onclick="xemhang(this.getAttribute('data-product-id'))" class="btn btn-view" data-product-id="${product.id}">${product.buttonText}</button>
                 <a href="#" class="btn btn-buy">Mua ngay</a>
               </div>
             </div>
           </div>`;
-  });
+    });
+    rowJSproduct.innerHTML = HTML;
+  }
+
+  function renderPagination() {
+    const paginationElement = document.getElementById('pagination');
+    paginationElement.innerHTML = '';
+    const totalPages = Math.ceil(data.length / postsPerPage);
+    for (let i = 1; i <= totalPages; i++) {
+      const pageLink = document.createElement('a');
+      pageLink.href = '#';
+      pageLink.innerText = i;
+      pageLink.classList.add('page-link');
+      if (i === currentPage) {
+        pageLink.classList.add('active');
+      }
+      pageLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        setPage(i);
+      });
+      paginationElement.appendChild(pageLink);
+    }
+  }
+
+  // Initial render
+  renderPosts(currentPage);
+  renderPagination();
+};
 
 
-  rowJSproduct.innerHTML = HTML;
+// Chuc nang tim kiem
+const form = document.querySelector('.header-search');
+const inputSearch = document.querySelector('.header_search-input');
+const btnSearch = document.querySelector('.header_search-btn');
+
+// Xử lý khi submit form
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt khi submit
+  searchProduct();
+});
+
+// Xử lý khi nhấn nút "Tìm kiếm"
+btnSearch.addEventListener('click', async () => {
+  searchProduct();
+});
+
+// Hàm tìm kiếm sản phẩm
+// Hàm tìm kiếm sản phẩm
+const searchProduct = async () => {
+  const searchTerm = inputSearch.value.trim();
+
+  if (searchTerm !== '') {
+    try {
+      // Gửi yêu cầu tìm kiếm sản phẩm
+      const response = await axios.get(`${apiUrl}?title=${searchTerm}`);
+      const searchData = response.data;
+
+      // Xóa kết quả tìm kiếm trước đó (nếu có)
+      rowJSproduct.innerHTML = '';
+
+      // Hiển thị kết quả tìm kiếm trên trang web
+      if (searchData.length > 0) {
+        ShowProduct(searchData);
+      } else {
+        rowJSproduct.innerHTML = '<p>Không tìm thấy sản phẩm phù hợp</p>';
+      }
+    } catch (error) {
+      console.error("Error searching for product:", error);
+    }
+  } else {
+    alert("Vui lòng nhập từ khóa tìm kiếm!");
+  }
 };
 
 
@@ -151,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
   breadcrumb.textContent = breadcrumbText;
 });
 
+//grid và list
 
 //wow js hieu ung animate
 jQuery(function () {

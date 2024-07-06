@@ -33,3 +33,28 @@
 }
 
 
+
+/*  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.pagination a {
+  color: #007bff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.pagination a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.pagination .active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
