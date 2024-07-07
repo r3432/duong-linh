@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, html, div, p, input {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body, html, div, p, input {
 /* Container and row styles */
 .container {
   width: 100%;
-  overflow: hidden;
+ 
 }
 
 .row {

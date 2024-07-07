@@ -45,7 +45,7 @@ function topFunction() {
     
 
 //wow js hieu ung animate
-jQuery(function () {
-    new WOW().init();
-  });
-  jQuery("[data-toggle='tooltip']").tooltip(); 
+// jQuery(function () {
+//     new WOW().init();
+//   });
+//   jQuery("[data-toggle='tooltip']").tooltip(); 
