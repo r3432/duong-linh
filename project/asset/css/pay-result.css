@@ -1,6 +1,7 @@
 .pay-wrap{
   display: flex;
   justify-content: center;
+  margin:30px 0;
 }
 .pay-wrap .pay-icon{
 
@@ -49,4 +50,10 @@ border-bottom: 1px solid #e0e0e0;
 }
 .cart-main-right .pay-all{
   color: red;
+}
+
+@media (max-width: 992px) {
+  .header-cart .giohang{
+    display: none;
+  }
 }

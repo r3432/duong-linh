@@ -11,6 +11,7 @@
   justify-content: flex-end;
 }
 .header-top-list{
+  position: relative;
   display: flex;
   list-style: none;
   align-items: center;
@@ -510,6 +511,9 @@ border: 2px solid #ef2317;
 }
 
 @media (max-width:480px){
+ 
+  
+
 .product-menu-item{
 display: block;
 }
@@ -639,7 +643,7 @@ height: 4.8rem;
 /* product-love */
 .product-love {
   background-color: #efefef;
-  margin-bottom: 30px;
+  padding-bottom: 70px;
 }
 @media (max-width: 992px) {
   .product-love .big-white .col-lg-2 {
@@ -766,7 +770,7 @@ height: 4.8rem;
 
 /* reponssive */
 /* Tạo breakpoint cho responsive */
-@media (max-width: 768px) {
+@media (max-width: 998px) {
   /* Cho phần header top */
   
   .header_top {
@@ -782,10 +786,14 @@ height: 4.8rem;
     align-items: center;
   }
 
+
+
+
   .header-top-list {
     margin-top: 10px;
     margin: auto;
     padding-left: 0;
+   
   }
   .header-top-list li{
     margin-left: 10px;
@@ -801,6 +809,7 @@ height: 4.8rem;
   .header_bottom-main {
     flex-direction: column;
     align-items: center;
+    margin-bottom: -50px;
   }
 
   .header_logo {
@@ -890,6 +899,12 @@ right: -90px;
 }
 
 @media (max-width: 992px) {
+  .header-login-icon i{
+    position: absolute;
+  top: -37px;
+  left: 10px;
+  color: red;
+  }
   .product-love .ccc .col-lg-3 {
     flex: 0 0 auto;
     width: 90%;
@@ -970,6 +985,34 @@ padding-left: 0 ;
 @media (max-width: 992px) {
 
 
+  .header_bottom-main{
+    position: relative;
+  }
+
+.header-cart .header-cart-icon-wrap{
+  position: absolute;
+  right: 15px;
+  top:200px;
+  z-index: 9999;
+}
+.navbar-toggler{
+  margin-left: 10px;
+}
+
+
+
+.header-login .header-call{
+display: none;
+}
+.header-login{
+  
+}
+
+
+
+.header-cart .giohang{
+  display: none;
+}
   .header_bottom-main {
     flex-direction: column;
     align-items: center;
@@ -1002,4 +1045,8 @@ padding-left: 0 ;
 
     box-shadow: none;
   }
+}
+
+.breadcrumb{
+  margin-top: 14px;
 }
