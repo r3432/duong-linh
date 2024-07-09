@@ -180,4 +180,20 @@
   .header-cart .giohang{
     display: none;
   }
-}
+
+  .cart-main{
+    display: block;
+    
+  }
+  .cart-main-wrap{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .cart-main-right{
+    width: 100%;
+  }
+  .cart-main-infor{
+      display: block;
+     
+    }
+  }
