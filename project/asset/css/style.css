@@ -995,7 +995,7 @@ padding-left: 0 ;
   top:200px;
   z-index: 9999;
 }
-.navbar-toggler{
+.navbar-toggler, .navbar-nav{
   margin-left: 10px;
 }
 
