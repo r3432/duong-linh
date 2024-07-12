@@ -110,18 +110,50 @@
   background-color: #ff424e;
   color: #fff;
 }
-.header_bottom-main .header-cart {
-  position: relative;
+.header_bottom-main .header-cart  {
+
 }
 .add-cart{
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 240px;
   display: none;
   width: 350px;
   height: 100px;
-
+z-index: 999;
   
+
+animation: slideInRight 0.5s forwards; /* Sử dụng animation slideInRight */
+}
+/* Định nghĩa animation slideInRight */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Di chuyển từ bên phải ra ngoài */
+  }
+  to {
+    transform: translateX(0); /* Đến vị trí ban đầu */
+  }
+}
+
+
+/* click xóa animate */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* .cart-item.slide-out {
+  animation: slideOutRight 0.3s forwards;
+} */
+
+.cart-item img{
+  margin-right: 15px;
+  object-fit: fill;
+ 
 }
 .quantity-button{
   padding:2px 9px;
@@ -140,7 +172,8 @@ text-align: center;
   display: flex;
   padding: 15px;
   border-bottom: 1px solid #df3c3c;
-  background-color: #ffd8d8;
+  background-color: #dd5b5b;
+  transition: ease-in ;
 }
 
 .cart-item:last-child {
@@ -148,7 +181,18 @@ text-align: center;
 }
 
 .cart-item img {
-  width: 60px;
+  width: 100px;
+}
+.remove-from-cart-button{
+  padding: 2px 5px;
+  border: none;
+  background-color: #ccc;
+  border-radius: 5px;
+
+ 
+}
+.remove-from-cart-button:hover{
+  background-color: rgb(225, 246, 225);
 }
 
 
@@ -343,4 +387,18 @@ display: block;
   height: 100%;
   object-fit: cover;
 }
+@media (min-width: 993px) and  (max-width: 1824px) {
+ .header_bottom-main .header-cart  {
 
+}
+.add-cart{
+  position: absolute;
+  right: 38px;
+  top: 140px;
+  display: none;
+  width: 350px;
+  height: 100px;
+z-index: 999;
+  
+}
+}
