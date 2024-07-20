@@ -87,18 +87,20 @@ const payToCart = () =>{
 }
 
 // Xử lý thêm sản phẩm vào giỏ hàng
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {//tất cả trang tải xong mới thực hiện các thao tác js.
+
+
   const adCart = document.querySelector(".add-cart");
   const headCart = document.querySelector(".header-cart");
   
   // Khởi tạo sự kiện click cho nút tăng/giảm số lượng
-  document.body.addEventListener("click", (event) => {
+  document.body.addEventListener("click", (event) => { //lắng nghe sự kiện click trên toàn bộ trang
     if (event.target.id === "decrease-quantity") {
       const quantityElement = document.getElementById("quantity");
       let quantity = parseInt(quantityElement.innerText);
       if (quantity > 1) {
         quantity--;
-        quantityElement.innerText = quantity;
+        quantityElement.innerText = quantity;//Gán giá trị số lượng mới vào innerText của phần tử để hiển thị số lượng mới
       }
     }
 
@@ -276,15 +278,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Lắng nghe sự kiện click vào nút "Xóa"
-document.querySelector('.remove-from-cart-button').addEventListener('click', function() {
-  const addCart = document.querySelector('.remove-from-cart-button');
-  console.log(addCart)
-  // Thêm animation slideOutRight khi click vào nút "Xóa"
-  addCart.style.animation = 'slideOutRight 0.5s forwards';
 
-  // Sau khi animation kết thúc, ẩn phần tử
-  addCart.addEventListener('animationend', function() {
-    addCart.style.display = 'none';
-  });
-});

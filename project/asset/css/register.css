@@ -149,6 +149,7 @@
 
 /* footer */
 .footer-top{
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
+  background-color: #F1F1F1;
   padding-top:20px;
 }
