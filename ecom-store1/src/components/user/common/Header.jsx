@@ -4,9 +4,20 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-4 px-lg-5">
+        <div className="flex ">
         <Link className="navbar-brand" to="/">
           ECOM STORE
         </Link>
+
+        <div className="d-flex">
+          <Link to="/login" className="btn btn-outline-primary me-2 custom-btn">
+            Login
+          </Link>
+          <Link to="/dashboad" className="btn btn-outline-secondary custom-btn">
+            Dashboard
+          </Link>
+        </div>
+        </div>
         <button
           className="navbar-toggler"
           type="button"
