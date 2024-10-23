@@ -177,6 +177,55 @@
     </div>
 
     <div class="row roww-js">
+
+
+      <div class="detail-img-wrap col-md-6">
+        <div class="detail-img1">
+          <img id="mainImage" src="images1/m2.jpg" alt="Product Image">
+        </div>
+        <div class="thumbnail-img-wrap">
+          <img class="thumbnail-img" src="images1/m2.jpg" alt="Thumbnail 1" onclick="changeImage(this.src)">
+          <img class="thumbnail-img" src="https://vn.osim.com/cdn/shop/products/udivine-v-massage-chair-product_800x.jpg?v=1687426463" alt="Thumbnail 2" onclick="changeImage(this.src)">
+          <img class="thumbnail-img" src="https://vn.osim.com/cdn/shop/files/iconuDeluxemaxnau1_800x.jpg?v=1702632237" alt="Thumbnail 3" onclick="changeImage(this.src)">
+        </div>
+      </div>
+      <div class="detail-name col-md-6">
+        <div class="detail-img">
+          <h1 class="detail-taitle"> Ghế massage truyền thuyết</h1>
+          <div class="detail-rate">
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+            <i class="fas fa-star product-panel-rate"></i>
+          </div>
+          <h2 class="detail-taitle">Mã sản phẩm: 0000</h2>
+          <div class="detail-taitle">
+            <h3>Thông tin sản phẩm :</h3>
+            <p>- Công nghệ massage tiên tiến cho những giấc ngủ ngon hơn.</p>
+            <p>- Công nghệ massage 4 tay: có 4 bộ con lăn massage mạnh mẽ </p>
+            <!-- <p>- Công nghệ massage 4 tay: có 4 bộ con lăn massage mạnh mẽ </p> -->
+          </div>
+          <div class="detail-price">
+           Giá tiền: 100.000d
+          </div>
+          <div class="detail-quantity">
+            <h3>Số lượng:</h3>
+            <button class="quantity-button" id="decrease-quantity">-</button>
+            <span id="quantity">1</span>
+            <button class="quantity-button" id="increase-quantity">+</button>
+          </div>
+          <div class="detail-button">
+            <button type="submit" name="themgiohang" class="add-to-cart-button">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              <span>Thêm vào giỏ hàng</span>
+            </button>
+            <button type="submit" name="muangay" class="buy-now-button" onclick="payToCart()">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+              <span>Mua Ngay</span>
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- <div class="detail-img-wrap col-md-6">
         <div class="detail-img">
           <img id="mainImage" src="images1/comrang.png" alt="Product Image">
