@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container px-4 px-lg-5">
+      <div className="container flex">
       <div className="container flex justify-content-between ">
         <Link className="navbar-brand" to="/">
           ECOM STORE
